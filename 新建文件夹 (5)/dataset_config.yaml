@@ -1,0 +1,13 @@
+datasets:
+  MDD_Dataset:      # 你的数据集名称
+    targets: ["MDD"]
+    is_multi: false
+    is_binary: true
+    is_regression: false
+    num_classes: 2
+    target_name: "MDD"
+    metrics: ["acc", "auc","f1","spe","sen"]
+    # 这一步极其关键！必须让文本标签与数字 0 和 1 形成完美映射
+    label_dic: 
+      "Control": 0
+      "MDD": 1
